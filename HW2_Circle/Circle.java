@@ -1,11 +1,11 @@
 /*
  * Name: Jacob Dionne
- * Date:
- * Course Number:
- * Course Name:
- * Problem Number:
- * Email:
- * Short Description of the Problem
+ * Date: 02/03/2018
+ * Course Number: CSC-112
+ * Course Name: Itermediate Java
+ * Problem Number: 2
+ * Email: jtdionne0001@student.stcc.edu
+ * This class stores circle data as well as performing comparison operations
  */
 package HW2_Circle;
 
@@ -13,7 +13,6 @@ import java.lang.Math;
 
 public class Circle
 {
-	final private double PI = 3.1415;
 	private double x;
 	private double y;
 	private double radius;
@@ -32,12 +31,12 @@ public class Circle
 
 	public double getArea()
 	{
-		return (PI * getRadius() * getRadius());
+		return (Math.PI * getRadius() * getRadius());
 	}
 
 	public double getPerimeter()
 	{
-		return (2 * PI * getRadius());
+		return (2 * Math.PI * getRadius());
 	}
 
 	private double distance(double x1, double y1, double x2, double y2)
