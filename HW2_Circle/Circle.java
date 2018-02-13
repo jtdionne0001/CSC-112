@@ -87,7 +87,9 @@ public class Circle
 
 	public void setRadius(double radius)
 	{
-		this.radius = radius;
+		if (radius >= 0)
+			this.radius = radius;
+		else System.out.printf("Error radius less than 0");
 	}
 
 }
