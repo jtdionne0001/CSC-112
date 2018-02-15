@@ -15,50 +15,50 @@ public class Complex
 
 	public Complex add(Complex c)
 	{
-		return new Complex(this.getR() + c.getR(), this.getim() + c.getim());
+		return new Complex(this.r + c.r, this.im + c.im);
 	}
 
 	public Complex subtract(Complex c)
 	{
-		return new Complex(this.getR() - c.getR(), this.getim() - c.getim());
+		return new Complex(this.r - c.r, this.im - c.im);
 	}
 
 	public Complex multiply(Complex c)
 	{
-		return new Complex(this.getR() * c.getR() - this.getim() * c.getim(),
-				this.getR() * c.getim() + c.getR() * this.getim());
+		return new Complex(this.r * c.r - this.im * c.im,
+				this.r * c.im + c.r * this.im);
 	}
 
 	public Complex divide(Complex c)
 	{
 		return new Complex(
-				(this.getR() * c.getR() + this.getim() * c.getim()) / (Math.pow(c.getR(), 2) + Math.pow(c.getim(), 2)),
-				(this.getim() * c.getR() + this.getR() * c.getim()) / (Math.pow(c.getR(), 2) + Math.pow(c.getim(), 2)));
+				(this.r * c.r + this.im * c.im) / (Math.pow(c.r, 2) + Math.pow(c.im, 2)),
+				(this.im * c.r + this.r * c.im) / (Math.pow(c.r, 2) + Math.pow(c.im, 2)));
 	}
 
 	public Complex negate()
 	{
-		return new Complex(-this.getR(), -this.getim());
+		return new Complex(-this.r, -this.im);
 	}
 
 	public Complex conjugate()
 	{
-		return new Complex(this.getR(), -this.getim());
+		return new Complex(this.r, -this.im);
 	}
 
 	public double abs()
 	{
-		return (Math.sqrt(Math.pow(this.getR(), 2) + Math.pow(this.getim(), 2)));
+		return (Math.sqrt(Math.pow(this.r, 2) + Math.pow(this.im, 2)));
 	}
 
 	public double distance(Complex c)
 	{
-		return (Math.sqrt(Math.pow(this.getR() - c.getR(), 2) + Math.pow(this.getim() - c.getim(), 2)));
+		return (Math.sqrt(Math.pow(this.r - c.r, 2) + Math.pow(this.im - c.im, 2)));
 	}
 
 	public boolean equal(Complex c)
 	{
-		return (1E-6 <= Math.sqrt(Math.pow(this.getR() - c.getR(), 2) + Math.pow(this.getim() - c.getim(), 2)));
+		return (1E-6 <= Math.sqrt(Math.pow(this.r - c.r, 2) + Math.pow(this.im - c.im, 2)));
 	}
 
 	public boolean greaterThan(Complex c)
@@ -94,7 +94,7 @@ public class Complex
 	@Override
 	public String toString()
 	{
-		return this.getR() + " + " + this.getim() + "i";
+		return this.r + " + " + this.im + "i";
 	}
 
 }
