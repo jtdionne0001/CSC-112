@@ -13,7 +13,8 @@ public class ComplexNumberDriver
 			{
 				return Double
 						.parseDouble(JOptionPane.showInputDialog(null, prompt, title, JOptionPane.INFORMATION_MESSAGE));
-			} catch (Exception ex)
+			}
+			catch (Exception ex)
 			{
 				JOptionPane.showMessageDialog(null, "Bad Double", title, JOptionPane.INFORMATION_MESSAGE);
 			}
