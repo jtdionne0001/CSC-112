@@ -11,12 +11,11 @@ public class ComplexNumberDriver
 
 	private static void getComplex(String prompt, String title)
 	{
+		Pattern pattern = Pattern.compile("\\-\\d+\\.\\d+|\\d+\\.\\d+|\\d+");
 		do
 		{
-			String number = JOptionPane.showInputDialog(null, prompt + "\nExample: 2+6i or -5.7+8i", title,
-					JOptionPane.INFORMATION_MESSAGE);
-			Pattern pattern = Pattern.compile("\\-\\d+\\.\\d+|\\d+\\.\\d+|\\d+");
-			Matcher matcher = pattern.matcher(number);
+			Matcher matcher = pattern.matcher(JOptionPane.showInputDialog(null, prompt + "\nExample: 2+6i or -5.7+8i",
+					title, JOptionPane.INFORMATION_MESSAGE));
 			if (matcher.find())
 			{
 				real = Double.parseDouble(matcher.group());
