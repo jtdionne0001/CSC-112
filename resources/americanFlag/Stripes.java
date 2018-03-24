@@ -37,7 +37,7 @@ public class Stripes extends Application
 		b.setFill(Color.BLUE);
 		pane.getChildren().addAll(b);
 
-		String imagePath = "\\americanFlag\\flagstar.png";
+		String imagePath = "/flagstar.png";
 		Image flagstar = new Image(imagePath);
 
 		for (int j = 0; j < 5; j++)
